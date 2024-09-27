@@ -4,7 +4,7 @@
   "description": "",
   "main": "00.index.js",
   "scripts": {
-    "dev": "nodemon js/02.statusCode.js"
+    "dev": "nodemon js/03.cabeceras.js"
   },
   "keywords": [],
   "author": "",

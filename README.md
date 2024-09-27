@@ -38,3 +38,4 @@
   - y una vez configurado, ejecutamos en consola:
     - **_npm run dev_**
   - Con ello, lograremos ejecutar el contenido del archivo, que en este caso es la configuración de un SERVER
+
