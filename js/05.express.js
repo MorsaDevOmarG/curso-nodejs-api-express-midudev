@@ -2,6 +2,13 @@ const express = require('express');
 const ditto = require('js/04.ditto.json');
 const app = express();
 
+// Middleware
+app.use((req, res, next) => {
+    console.log('Mi primer MIDDLEWARE');
+
+    next();
+});
+
 // Ayuda a prevenir vulnerabilidades
 app.disable('x-powered-by');
 
