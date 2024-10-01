@@ -5,7 +5,7 @@
   "main": "00.index.js",
   "scripts": {
     "dev": "nodemon js/04.routing.js",
-    "dev:3": "node --watch 05.expression.js"
+    "dev:3": "node --watch 05.express.js"
   },
   "keywords": [],
   "author": "",

@@ -46,4 +46,14 @@
 - Instalación
   - Dependencia de producción:
     - **_npm install express -E_** (-E, modo exacto)
+  - Configuramos en:
+    -  **_package.json_**
+  - ```
+      "scripts": {
+        "dev": "nodemon js/04.routing.js",
+        "dev:3": "node --watch 05.express.js"
+      },
+    ```
+  - Y lo ejecutamos en consola como:
+  - **_npm run dev:3_**
   - 
