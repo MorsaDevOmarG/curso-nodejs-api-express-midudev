@@ -4,12 +4,17 @@
   "description": "",
   "main": "00.index.js",
   "scripts": {
-    "dev": "nodemon js/04.routing.js"
+    "dev": "nodemon js/04.routing.js",
+    "dev:3": "node --watch 05.expression.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "express": "4.21.0",
+    "js": "file:"
   }
 }

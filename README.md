@@ -39,3 +39,11 @@
     - **_npm run dev_**
   - Con ello, lograremos ejecutar el contenido del archivo, que en este caso es la configuración de un SERVER
 
+## EXPRESS.JS
+
+- **_Framework de Node.js_**
+
+- Instalación
+  - Dependencia de producción:
+    - **_npm install express -E_** (-E, modo exacto)
+  - 
