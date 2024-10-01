@@ -4,7 +4,22 @@ const app = express();
 
 // Middleware
 app.use((req, res, next) => {
-    console.log('Mi primer MIDDLEWARE');
+    if (req.method !== 'POST') return next();
+    if (req.headers['Content-Type'] !== 'application/json') return next();
+
+    let body = '';
+
+    req.on('data', chunk => {
+        body += chunk.toString();
+    });
+
+    req.on('end', () => {
+        const data = JSON.parse(body);
+        data.timestamp = Date.now();
+        res.status(201).json(data);
+
+        req.bod = data;
+    });
 
     next();
 });
@@ -19,17 +34,7 @@ app.get('/pokemon/ditto', (req, res) => {
 });
 
 app.post('/pokemon', (req, res) => {
-    let body = '';
-
-    req.on('data', chunk => {
-        body += chunk.toString();
-    });
-
-    req.on('end', () => {
-        const data = JSON.parse(body);
-        data.timestamp = Date.now();
-        res.status(201).json(data);
-    });
+    res.status(201).json(req.body);
 });
 
 // La última a la que va a llegar
